@@ -4,7 +4,7 @@ import RandomQuoteCards from "./RandomQuoteCards";
 
 function PricingCardsPage() {
   return (
-    <PageLayout slug="pricing-cards">
+    <PageLayout slug="random-quote-cards">
       <RandomQuoteCards />
     </PageLayout>
   );

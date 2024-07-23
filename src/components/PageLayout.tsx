@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { Maximize } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 function PageLayout({
   slug,
@@ -20,7 +19,7 @@ function PageLayout({
     <div className={` h-screen flex bg-accent ${fontSans.className}`}>
       <Sidebar className={cn("w-72")} />
 
-      <ScrollArea className="grow m-5  bg-white rounded-lg shadow-sm border relative overflow-x-hidden">
+      <div className=" grow m-5 flex bg-white rounded-lg shadow-sm border relative overflow-x-hidden">
         {children}
 
         <Button
@@ -32,7 +31,7 @@ function PageLayout({
             <Maximize />
           </Link>
         </Button>
-      </ScrollArea>
+      </div>
     </div>
   );
 }

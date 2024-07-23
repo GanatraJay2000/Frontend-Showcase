@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { ScrollArea } from "./ui/scroll-area";
 
 function Sidebar({ className }: { className?: string }) {
-  const items = Object.values(itemMap);
+  const items = Object.values(itemMap ?? {});
   const pathname = usePathname();
   console.log(pathname.slice(1));
   const current = items.find((item) => item.slug === pathname.slice(1));

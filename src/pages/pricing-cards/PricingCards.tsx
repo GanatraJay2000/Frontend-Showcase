@@ -2,10 +2,9 @@ import React from "react";
 
 function PricingCards() {
   return (
-    <div className="min-w-full min-h-full">
-      <ul>
-        <li>PC</li>
-      </ul>
+    <div className="min-w-full h-full bg-red-100">
+      <li>PC</li>
+      <li>PC</li>
     </div>
   );
 }
