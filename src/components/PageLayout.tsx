@@ -24,7 +24,7 @@ function PageLayout({
 
         <Button
           size="icon"
-          variant="ghost"
+          variant="outline"
           className="absolute right-2 top-2 z-10"
         >
           <Link href={"/full-screen/" + slug}>

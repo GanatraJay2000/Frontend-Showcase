@@ -21,3 +21,5 @@ export const itemMap: IMap = {
     slug: "pricing-cards",
   },
 };
+
+export type ItemType = (typeof itemMap)[keyof typeof itemMap];
