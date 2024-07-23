@@ -67,8 +67,8 @@ function SidebarItem({ item, current }: { item: ItemType; current: Boolean }) {
                 <TooltipTrigger asChild>
                   <Ellipsis
                     className={cn(
-                      "px-1 h-10 py-3 pointer-events-auto hidden group-hover:block absolute right-2 top-1/2 -translate-y-1/2",
-                      current ? "block" : ""
+                      "px-1 h-10 py-3 pointer-events-auto invisible group-hover:visible absolute right-2 top-1/2 -translate-y-1/2",
+                      current ? "visible" : ""
                     )}
                   />
                 </TooltipTrigger>
