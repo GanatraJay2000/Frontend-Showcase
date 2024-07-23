@@ -81,9 +81,14 @@ function SidebarItem({ item, current }: { item: ItemType; current: Boolean }) {
           </TooltipProvider>
 
           <PopoverContent
-            className={`absolute left-0 w-max py-2 px-4 text-sm ${inter.className}`}
+            className={`absolute left-0 w-max p-0 text-sm ${inter.className}`}
           >
-            <Link href={`/full-screen/${item.slug}`}>Full Screen</Link>
+            <Link
+              className="block w-full py-2 px-4"
+              href={`/full-screen/${item.slug}`}
+            >
+              Full Screen
+            </Link>
           </PopoverContent>
         </Popover>
       </div>
