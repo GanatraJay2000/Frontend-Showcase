@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Frontend Showcase</title>
+        <title>Jay Ganatra | Frontend Showcase</title>
       </Head>
       <Toaster position="top-center" closeButton   />
       <Component {...pageProps} />

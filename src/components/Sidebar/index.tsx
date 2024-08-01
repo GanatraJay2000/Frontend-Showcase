@@ -18,8 +18,7 @@ function Sidebar({
 }) {
   const items = Object.values(itemMap ?? {});
   const pathname = usePathname();
-  const current = items.find((item) => item.slug === pathname.slice(1));
-  
+  const current = items.find((item) => item.slug === pathname?.slice(1));
   return (
     <div className={cn(`${fontSans.className}`, className)}>
       <div className="bg-white rounded-tr-lg rounded-br-lg md:rounded-lg shadow-sm border w-full h-full p-5">

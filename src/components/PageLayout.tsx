@@ -9,9 +9,11 @@ import Link from "next/link";
 function PageLayout({
   slug,
   children,
+  noFullScreen = false,
 }: {
   slug: string;
   children: React.ReactNode;
+  noFullScreen?: boolean;
 }) {
   const [sideBarOpen, setSideBarOpen] = React.useState(false);
   return (
@@ -36,16 +38,20 @@ function PageLayout({
           >
             <Menu />
           </Button>
-
-          <Button
-            size="icon"
-            variant="outline"
-            className="absolute right-2 top-2 z-10 hidden md:flex justify-center"
-          >
-            <Link href={"/full-screen/" + slug}>
-              <Maximize />
-            </Link>
-          </Button>
+          {
+            !noFullScreen && (
+              <Button
+                size="icon"
+                variant="outline"
+                className="absolute right-2 top-2 z-10 hidden md:flex justify-center"
+              >
+                <Link href={"/full-screen/" + slug}>
+                  <Maximize />
+                </Link>
+              </Button>
+            )
+          }
+          
         </div>
       </div>
     </div>
