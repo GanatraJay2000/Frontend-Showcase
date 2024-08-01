@@ -6,7 +6,7 @@ import { itemMap } from "@/lib/itemMap";
 import { usePathname } from "next/navigation";
 import SidebarItem from "./SidebarItem";
 import SidebarClose from "./SidebarClose";
-
+import { spaceGrotesk as fontSans } from "@/lib/fonts";
 function Sidebar({
   className,
   setSideBarOpen,
@@ -21,7 +21,7 @@ function Sidebar({
   const current = items.find((item) => item.slug === pathname.slice(1));
   
   return (
-    <div className={cn("", className)}>
+    <div className={cn(`${fontSans.className}`, className)}>
       <div className="bg-white rounded-tr-lg rounded-br-lg md:rounded-lg shadow-sm border w-full h-full p-5">
         <SidebarClose sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} />
 
