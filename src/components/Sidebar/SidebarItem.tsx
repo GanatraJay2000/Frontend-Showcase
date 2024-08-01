@@ -1,10 +1,3 @@
-import { Ellipsis } from "lucide-react";
-import Link from "next/link";
-import React from "react";
-import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
-import { itemMap, ItemType } from "@/lib/itemMap";
-import { usePathname } from "next/navigation";
 import {
   Tooltip,
   TooltipContent,
@@ -18,31 +11,11 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { inter } from "@/lib/fonts";
-
-function Sidebar({ className }: { className?: string }) {
-  const items = Object.values(itemMap ?? {});
-  const pathname = usePathname();
-  console.log(pathname.slice(1));
-  const current = items.find((item) => item.slug === pathname.slice(1));
-  return (
-    <div
-      className={cn(
-        "my-5 ml-5 p-5 bg-white rounded-lg shadow-sm border w-full",
-        className
-      )}
-    >
-      <div>
-        {items.map((item) => (
-          <SidebarItem
-            key={item.slug}
-            item={item}
-            current={current?.slug === item.slug}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
+import { ItemType } from "@/lib/itemMap";
+import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
+import { Ellipsis } from "lucide-react";
+import Link from "next/link";
 
 function SidebarItem({ item, current }: { item: ItemType; current: Boolean }) {
   return (
@@ -102,4 +75,5 @@ function SidebarItem({ item, current }: { item: ItemType; current: Boolean }) {
   );
 }
 
-export default Sidebar;
+
+export default SidebarItem;
