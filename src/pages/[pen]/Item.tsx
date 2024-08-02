@@ -4,7 +4,7 @@ import Script from 'next/script'
 
 function Item({ penURL }: { penURL?: string }) {
   return (
-    <div className="w-full flex h-full bg-red-100">
+    <div className="w-full flex h-full bg-gray-600">
       <Script strategy="lazyOnload" async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></Script>
       <iframe  
         style={{"width": "100%",
