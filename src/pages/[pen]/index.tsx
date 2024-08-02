@@ -1,6 +1,5 @@
 import PageLayout from "@/components/PageLayout";
 import React from "react";
-import Item from "./Item";
 import { useParams } from "next/navigation";
 import { itemMap } from "@/lib/itemMap";
 import Head from "next/head";
