@@ -10,7 +10,6 @@ interface IMap {
   };
 }
 
-export const penBaseURL = "https://codepen.io/GanatraJay/embed/";
 
 export const itemMap: IMap = {
   "random-quote-cards": {
