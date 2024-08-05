@@ -1,5 +1,6 @@
 import Item from "@/pages/[pen]/Item"
-import RandomQuoteCards from "@/pages/random-quote-cards/RandomQuoteCards"
+import RandomQuoteCards from "@/slices/RandomQuoteCards"
+import SignUpPage from "@/slices/daily-ui-001";
 
 interface IMap {
   [key: string]: {
@@ -28,6 +29,11 @@ export const itemMap: IMap = {
     title: "CSS Challenges 30 - Hamburger Menu",
     slug: "hamburger-menu",
     noFullScreen: true,
+  },
+  "daily-ui-001": {
+    component: <SignUpPage />,
+    title: "Daily UI 001 - Sign Up",
+    slug: "daily-ui-001",
   },
 };
 

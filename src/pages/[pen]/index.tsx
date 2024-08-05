@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { itemMap } from "@/lib/itemMap";
 import Head from "next/head";
 
-function PricingCardsPage() {
+function Pen() {
   const params = useParams<{ pen: string }>();
   const item = itemMap[params?.pen];
   return (
@@ -17,4 +17,4 @@ function PricingCardsPage() {
   );
 }
 
-export default PricingCardsPage;
+export default Pen;

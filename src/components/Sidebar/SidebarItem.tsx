@@ -16,8 +16,19 @@ import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Ellipsis } from "lucide-react";
 import Link from "next/link";
+import { useRef } from "react";
 
 function SidebarItem({ item, current }: { item: ItemType; current: Boolean }) {
+  const linkRef = useRef<HTMLAnchorElement>(null);
+  const spanRef = useRef<HTMLSpanElement>(null);
+  const onMouseEnter = () => {
+    const linkW = linkRef.current!.getBoundingClientRect().width;
+    const spanW = spanRef.current!.getBoundingClientRect().width;
+    spanRef.current!.style.transform = `translateX(-${spanW - linkW + 65}px)`;
+  }
+  const onMouseLeave = () => {
+    spanRef.current!.style.transform = `translateX(0px)`;
+  }
   return (
     <Button
       variant="ghost"
@@ -27,7 +38,23 @@ function SidebarItem({ item, current }: { item: ItemType; current: Boolean }) {
         current ? " bg-secondary " : ""
       )}
     >
-      <div
+      <TooltipPopover item={item} current={current} />
+      <Link
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        ref={linkRef}
+        className="w-full text-left h-full flex items-center px-4 py-2"
+        href={item.slug}
+      >
+        <span ref={spanRef} className="transition-all">{item.title}</span>
+      </Link>
+    </Button>
+  );
+}
+
+
+function TooltipPopover({ item, current }: { item: ItemType; current: Boolean }) {
+  return (<div
         className={cn(
           "pointer-events-none absolute top-0 left-0 w-full h-full bg-gradient-to-l to-transparent to-30% via-transparent via-10% from-white z-10 from-5% group-hover:from-accent group-hover:from-15% group-hover:via-20%",
           current ? "from-secondary from-15% via-20%" : ""
@@ -64,15 +91,7 @@ function SidebarItem({ item, current }: { item: ItemType; current: Boolean }) {
             </Link>
           </PopoverContent>
         </Popover>
-      </div>
-      <Link
-        className="w-full text-left h-full flex items-center px-4 py-2"
-        href={item.slug}
-      >
-        {item.title}
-      </Link>
-    </Button>
-  );
+      </div>)
 }
 
 

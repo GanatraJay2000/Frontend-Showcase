@@ -2,7 +2,7 @@ import React from "react";
 
 function Item({ pen }: { pen?: string }) {
   return (
-    <div className="w-full flex h-full bg-gray-600">
+    <div className="w-full flex bg-gray-600">
       <iframe  
         style={{
           "width": "100%",

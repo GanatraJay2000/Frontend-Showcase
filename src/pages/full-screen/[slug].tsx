@@ -11,7 +11,7 @@ function FullScreen() {
   const item = itemMap[params?.slug] ?? "Not found! Go Back";
 
   return (
-    <div className={`min-h-screen flex  ${inter.className}`}>
+    <div className={`min-h-screen flex ${inter.className}`}>
       <Button
         size="icon"
         variant="outline"
