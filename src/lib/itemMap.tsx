@@ -1,6 +1,7 @@
 import Item from "@/pages/[pen]/Item"
 import RandomQuoteCards from "@/slices/RandomQuoteCards"
 import SignUpPage from "@/slices/daily-ui-001";
+import CreditCardCheckout from "@/slices/daily-ui-002";
 
 interface IMap {
   [key: string]: {
@@ -34,6 +35,11 @@ export const itemMap: IMap = {
     component: <SignUpPage />,
     title: "Daily UI 001 - Sign Up",
     slug: "daily-ui-001",
+  },
+  "daily-ui-002": {
+    component: <CreditCardCheckout />,
+    title: "Daily UI 002 - Credit Card Checkout",
+    slug: "daily-ui-002",
   },
 };
 

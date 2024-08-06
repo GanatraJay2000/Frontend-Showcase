@@ -1,4 +1,4 @@
-import { Inter, Poppins, Space_Grotesk } from "next/font/google";
+import { Inter, Poppins, Prata, Space_Grotesk, Unna } from "next/font/google";
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -19,4 +19,18 @@ export const spaceGrotesk = Space_Grotesk({
   display: "swap",
   variable: "--font-poppins",
   weight: ["300", "400", "500", "600", "700"],
+});
+
+export const unna = Unna({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["400", "700"],
+});
+
+export const prata = Prata({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["400"],
 });
