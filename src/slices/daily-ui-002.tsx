@@ -1,3 +1,6 @@
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import { poppins, prata, unna } from '@/lib/fonts'
 import { ChevronLeft } from 'lucide-react'
 import Image from 'next/image'
@@ -50,7 +53,28 @@ function CreditCardCheckout() {
                             <div className="justify-self-end">10/22</div>
                         </div>
                     </div>
+
+                    <div className="text-indigo-900 mt-10">
+                        <div className="grid w-full max-w-sm items-center gap-1.5 mb-5">
+                            <Label htmlFor="email" >Name of Card Holder</Label>
+                            <Input id="email" placeholder="Jay Ganatra" className='rounded-lg' />
+                        </div>
+                        <div className="mb-10 grid w-full max-w-sm items-center gap-1.5">
+                            <Label htmlFor="password">Card Number</Label>
+                            <div className="flex justify-between gap-2">
+                                <Input id="password" className='rounded-lg shadow-lg' />
+                                <Input id="password" className='rounded-lg shadow-lg ' />
+                                <Input id="password" className='rounded-lg shadow-lg ' />
+                                <Input id="password" className='rounded-lg shadow-lg ' />
+                            </div>
+                        </div>
+                        <div className="flex justify-end">
+                            <Button size="lg" className='rounded-lg bg-[#3d3f57] mb-6 shadow-lg'>Purchase</Button>
+                        </div>
+                    </div>
                 </div>
+
+
 
             </div>
 
