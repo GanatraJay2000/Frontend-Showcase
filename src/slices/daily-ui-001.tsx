@@ -7,7 +7,6 @@ import { Download } from "lucide-react";
 
 function SignUpPage() {
   const { layout } = useTheme();
-  console.log(layout);
   return (
     <div className={`flex w-full bg-[#f4f6ff] justify-center pt-20`}>
       <div

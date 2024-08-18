@@ -9,13 +9,24 @@ import { SiVisa } from "react-icons/si";
 import { FaCreditCard } from "react-icons/fa";
 import { FaPaypal } from "react-icons/fa6";
 import { Select, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useTheme } from "@/pages/_app";
+import { cn } from "@/lib/utils";
 
 function CreditCardCheckout() {
+  const { layout } = useTheme();
   return (
     <div className="w-full bg-[#3d3f57] flex justify-center items-center">
-      <div className="bg-white rounded-xl overflow-hidden shadow-xl my-10 lg:my-0 w-9/12 flex flex-col lg:flex-row">
+      <div
+        className={cn(
+          "bg-white rounded-xl md:overflow-hidden shadow-xl my-10 lg:my-0 flex flex-col lg:flex-row",
+          {
+            "lg:w-full": layout === "sidebar",
+            "lg:w-9/12": layout === "full",
+          }
+        )}
+      >
         <div className="lg:w-1/2 p-5 md:p-10">
-          <div className="flex items-center gap-3 mb-10 text-sm">
+          <div className="md:flex md:items-center gap-3 mb-10 text-sm">
             <ChevronLeft />
             Continue Shopping
           </div>
