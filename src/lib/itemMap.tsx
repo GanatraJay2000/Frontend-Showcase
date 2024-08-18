@@ -1,5 +1,5 @@
-import Item from "@/pages/[pen]/Item"
-import RandomQuoteCards from "@/slices/RandomQuoteCards"
+import Item from "@/pages/[pen]/Item";
+import RandomQuoteCards from "@/slices/RandomQuoteCards";
 import SignUpPage from "@/slices/daily-ui-001";
 import CreditCardCheckout from "@/slices/daily-ui-002";
 
@@ -12,18 +12,17 @@ interface IMap {
   };
 }
 
-
 export const itemMap: IMap = {
-  "random-quote-cards": {
-    component: <RandomQuoteCards />,
-    title: "Random Quote Cards",
-    slug: "random-quote-cards",
-  },
   "pendulum-wave": {
     component: <Item pen="eYwvLPW" />,
     title: "CSS Challenges 31 - Pendulum Wave",
     slug: "pendulum-wave",
     noFullScreen: true,
+  },
+  "random-quote-cards": {
+    component: <RandomQuoteCards />,
+    title: "Random Quote Cards",
+    slug: "random-quote-cards",
   },
   "hamburger-menu": {
     component: <Item pen="eYwvQam" />,
@@ -40,6 +39,12 @@ export const itemMap: IMap = {
     component: <CreditCardCheckout />,
     title: "Daily UI 002 - Credit Card Checkout",
     slug: "daily-ui-002",
+  },
+  "3D-cube": {
+    component: <Item pen="vYqdOMe" />,
+    title: "CSS Challenges 48 - 3D Cube",
+    slug: "3D-cube",
+    noFullScreen: true,
   },
 };
 

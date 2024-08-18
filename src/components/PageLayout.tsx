@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Maximize, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { useTheme } from "@/pages/_app";
 
 function PageLayout({
   slug,
@@ -16,14 +17,18 @@ function PageLayout({
   noFullScreen?: boolean;
 }) {
   const [sideBarOpen, setSideBarOpen] = React.useState(false);
+  const pageLayout = useTheme();
   return (
     <div className={`relative h-screen flex bg-accent ${fontSans.className}`}>
       <Sidebar
         setSideBarOpen={setSideBarOpen}
         sideBarOpen={sideBarOpen}
-        className={cn("md:py-5 md:pl-5 h-full w-72 absolute transition-all z-20", {
-          "-translate-x-full md:translate-x-0": !sideBarOpen,
-        })}
+        className={cn(
+          "md:py-5 md:pl-5 h-full w-72 absolute transition-all z-20",
+          {
+            "-translate-x-full md:translate-x-0": !sideBarOpen,
+          }
+        )}
       />
 
       <div className="ml-0 md:ml-72 md:p-5 grow flex">
@@ -38,20 +43,18 @@ function PageLayout({
           >
             <Menu />
           </Button>
-          {
-            !noFullScreen && (
+          {!noFullScreen && (
+            <Link href={"/full-screen/" + slug}>
               <Button
                 size="icon"
                 variant="outline"
                 className="absolute right-2 top-2 z-10 hidden md:flex justify-center"
+                onClick={() => pageLayout.setLayout("full")}
               >
-                <Link href={"/full-screen/" + slug}>
-                  <Maximize />
-                </Link>
+                <Maximize />
               </Button>
-            )
-          }
-          
+            </Link>
+          )}
         </div>
       </div>
     </div>
