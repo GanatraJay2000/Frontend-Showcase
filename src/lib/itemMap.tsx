@@ -46,6 +46,12 @@ export const itemMap: IMap = {
     slug: "3D-cube",
     noFullScreen: true,
   },
+  "slider-with-buttons": {
+    component: <Item pen="xxoYyLK" />,
+    title: "CSS Challenges 19 - Slider with buttons",
+    slug: "slider-with-buttons",
+    noFullScreen: true,
+  },
 };
 
 export type ItemType = (typeof itemMap)[keyof typeof itemMap];
