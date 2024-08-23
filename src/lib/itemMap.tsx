@@ -52,6 +52,12 @@ export const itemMap: IMap = {
     slug: "slider-with-buttons",
     noFullScreen: true,
   },
+  "range-slider": {
+    component: <Item pen="XWLqdOG" />,
+    title: "CSS Challenges 53 - Range Slider",
+    slug: "range-slider",
+    noFullScreen: true,
+  },
 };
 
 export type ItemType = (typeof itemMap)[keyof typeof itemMap];
