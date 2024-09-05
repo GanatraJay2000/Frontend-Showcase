@@ -58,6 +58,12 @@ export const itemMap: IMap = {
     slug: "range-slider",
     noFullScreen: true,
   },
+  "sparkle-checkbox": {
+    component: <Item pen="vYqvEGB" />,
+    title: "CSS Challenges 66 - Sparkle Checkbox",
+    slug: "sparkle-checkbox",
+    noFullScreen: true,
+  },
 };
 
 export type ItemType = (typeof itemMap)[keyof typeof itemMap];
