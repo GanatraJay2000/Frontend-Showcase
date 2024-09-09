@@ -64,6 +64,12 @@ export const itemMap: IMap = {
     slug: "sparkle-checkbox",
     noFullScreen: true,
   },
+  "gsap-grid-rotating-stars": {
+    component: <Item pen="BagMOGL" />,
+    title: "GSAP GRID RECREATION - ROTATING STARS",
+    slug: "gsap-grid-rotating-stars",
+    noFullScreen: true,
+  },
 };
 
 export type ItemType = (typeof itemMap)[keyof typeof itemMap];
