@@ -76,6 +76,12 @@ export const itemMap: IMap = {
     slug: "gsap-grid-following-eyes",
     noFullScreen: true,
   },
+  "jumping-ball": {
+    component: <Item pen="xxvKRBY" />,
+    title: "CSS Challenges 81 - Range Slider",
+    slug: "jumping-ball",
+    noFullScreen: true,
+  },
 };
 
 export type ItemType = (typeof itemMap)[keyof typeof itemMap];
