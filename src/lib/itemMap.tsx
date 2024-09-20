@@ -70,6 +70,12 @@ export const itemMap: IMap = {
     slug: "gsap-grid-rotating-stars",
     noFullScreen: true,
   },
+  "gsap-grid-following-eyes": {
+    component: <Item pen="WNVeogb" />,
+    title: "GSAP GRID RECREATION - FOLLOWING EYES",
+    slug: "gsap-grid-following-eyes",
+    noFullScreen: true,
+  },
 };
 
 export type ItemType = (typeof itemMap)[keyof typeof itemMap];
