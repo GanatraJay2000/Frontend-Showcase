@@ -78,7 +78,7 @@ export const itemMap: IMap = {
   },
   "jumping-ball": {
     component: <Item pen="xxvKRBY" />,
-    title: "CSS Challenges 81 - Range Slider",
+    title: "CSS Challenges 81 - Jumping Ball",
     slug: "jumping-ball",
     noFullScreen: true,
   },
