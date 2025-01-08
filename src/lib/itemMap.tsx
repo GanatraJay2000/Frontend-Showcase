@@ -13,12 +13,12 @@ interface IMap {
 }
 
 export const itemMap: IMap = {
-  jiggle: {
-    component: <Item pen="dPbGJRb" />,
-    title: "Jiggle",
-    slug: "jiggle",
-    noFullScreen: true,
-  },
+  // jiggle: {
+  //   component: <Item pen="dPbGJRb" />,
+  //   title: "Jiggle",
+  //   slug: "jiggle",
+  //   noFullScreen: true,
+  // },
   "pendulum-wave": {
     component: <Item pen="eYwvLPW" />,
     title: "CSS Challenges 31 - Pendulum Wave",
